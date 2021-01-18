@@ -23,6 +23,9 @@ if len(organizers) == number_of_teams:
         organizer = organizers.pop()
         team.append(organizer)
         users.remove(organizer)
+elif len(organizers) == 1 and organizers[0] == "":
+    print("No organizers supplied, they will be chosen randomly (the first person in each team)")
+    pass
 else:
     raise ValueError("You have supplied a list of organizers that is different in length than the number of teams")
 
